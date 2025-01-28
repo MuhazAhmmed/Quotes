@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Islamic Relationship Quotes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0e6d3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            max-width: 600px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #2a5a5a;
+            margin-bottom: 25px;
+        }
+
+        #quote-box {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px 0;
+            min-height: 150px;
+        }
+
+        button {
+            background: #2a5a5a;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #1d4040;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Islamic Relationship Quotes</h1>
+        <div id="quote-box"></div>
+        <button onclick="showNextQuote()">Next Quote ➔</button>
+    </div>
+
+    <script>
+        const quotes = [
+            "And among His signs is that He created for you mates from among yourselves, that you may dwell in tranquility with them, and He put love and mercy between your hearts. (Quran 30:21)",
+            "The best of you are those who are best to their wives. (Hadith - Tirmidhi)",
+            "A woman is married for four things: her wealth, her lineage, her beauty, and her religion. Choose the one with religion, may your hands be blessed. (Hadith - Bukhari)",
+            "No believing man should hate a believing woman; if he dislikes one of her traits, he will find another he approves of. (Hadith - Muslim)",
+            "Treat women kindly, for woman was created from a rib. The most curved part is the top; if you try to straighten it, you will break it. (Hadith - Bukhari)"
+        ];
+
+        let currentIndex = 0;
+        const quoteBox = document.getElementById('quote-box');
+
+        function showNextQuote() {
+            quoteBox.innerHTML = quotes[currentIndex];
+            currentIndex = (currentIndex + 1) % quotes.length;
+        }
+
+        // Show first quote immediately
+        showNextQuote();
+    </script>
+</body>
+</html>
